@@ -1,7 +1,12 @@
 dist: xenial
 sudo: false
 
+after_success:
+ git clone https://github.com/YuraRodni/TravisCI.git ./repo
 
+  cd repo
+  git commit -m "Actions done."
+  git push
 
 deploy:
   provider: pages
